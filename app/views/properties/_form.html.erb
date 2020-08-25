@@ -35,9 +35,8 @@
     <%= form.text_field :remarks %>
   </div>
   <hr>
-  <% 2.times do |i|%>
-    <h2>最寄り駅 <%= i+1 %></h2>
     <%= form.fields_for :stations do |ps| %>
+     <h2>最寄り駅 <%= ps.index+1 %></h2>
       <%= ps.label :routeName ,"路線名"%>
       <%= ps.text_field :routeName %>
       <%= ps.label :stationName ,"駅名"%>
@@ -45,7 +44,6 @@
       <%= ps.label :minutes ,"徒歩分数"%>
       <%= ps.text_field :minutes %>
     <% end %>
-  <% end%>
   <div class="actions">
     <%= form.submit "更新する"%>
   </div>
