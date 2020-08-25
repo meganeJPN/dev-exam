@@ -37,13 +37,13 @@
   </div>
 
   
-  <%= form.fields_for :stations do |stations| %>
-    <%= stations.label :routeName %>
-    <%= stations.text_field :routeName %>
-    <%= stations.label :stationName %>
-    <%= stations.text_field :stationName %>
-    <%= stations.label :minutes %>
-    <%= statioons.text_field :minutes %>
+  <%= form.fields_for :propery_stations do |ps| %>
+    <%= ps.label :routeName %>
+    <%= ps.text_field :routeName %>
+    <%= ps.label :stationName %>
+    <%= ps.text_field :stationName %>
+    <%= ps.label :minutes %>
+    <%= ps.text_field :minutes %>
   <% end %>
   <div class="actions">
     <%= form.submit %>
